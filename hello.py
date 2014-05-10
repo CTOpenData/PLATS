@@ -25,9 +25,16 @@ def unzipfile(filepath):
 
 def shp2geojson(filename):
     # Converts a shapefile to a geojson file with spherical mercator.
+    in_file = os.path.join(app.config['UPLOAD_FOLDER'], filename)
+    out_file = 'uploads/{0}.geojson'.format(filename)
+    
     import subprocess
-    subprocess.call("ogr2ogr -t_srs EPSG:4326 -f GeoJSON uploads/"+filename+".geojson " + os.path.join(app.config['UPLOAD_FOLDER'], filename), shell=True)
-    return "uploads/"+filename+".geojson"
+    args = 'ogr2ogr -t_srs EPSG:4326 -f GeoJSON ___ ___'.split()
+    args[-2:] = out_file, in_file
+    print ' '.join(args)
+    os.remove(out_file)
+    subprocess.check_call(args)
+    return out_file
 
 def open_geojson(geojson_path):
     # Reads a geojson file.
