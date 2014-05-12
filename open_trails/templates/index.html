@@ -7,8 +7,7 @@
     <title>Code for America</title>
 
  	<!-- LEAFLET -->
-	<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.css"/>
-	<script src="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.js"></script>
+
     <!-- CODE FOR AMERICA STYLES -->
     <link rel="stylesheet" type="text/css" href="//cloud.typography.com/6435252/678502/css/fonts.css" />
     <link rel="stylesheet" href="http://style.codeforamerica.org/0/style/css/main.css">
@@ -56,19 +55,19 @@
 
 	<section class="layout-semibreve slab-gray">
 		<form id="steward" action="" method=post>
-
 			<h3 class="h3">Create your Organization Profile</h3>
+			<p>Tell us about your organization. This information helps data consumers understand where this data came from, and who to get in touch with if needed. This same information is used by visitors who may need assistance while visiting your lands or trails.</p>
 			<div class="layout-minim">
 				<!-- Steward name -->
 				<p>
-					<label for="text">Organization Name<abbr title="Required">*</abbr></label>
-					<input style="min-width:300px" id="name" class="input" type="text" required/>
+					<label for="name">Organization Name<abbr title="Required">*</abbr></label>
+					<input style="min-width:300px" id="name" class="input" type="name" required/>
 					<small class="note">Note about this field</small>
 				</p>
 				<!-- Steward email -->
 				<p>
 					<label for="email">Contact E-mail<abbr title="Required">*</abbr></label>
-					<input id="email" class="input" type="email" placeholder="you@example.com" required/>
+					<input id="email" class="input" type="email" placeholder="you@example.gov" required/>
 					<small class="note">Note about this field</small>
 				</p>
 			</div>
@@ -76,7 +75,7 @@
 				<!-- Steward phone -->
 				<p>
 					<label for="phone">Contact Phone <abbr title="Required">*</abbr></label>
-					<input id="phone" class="input" type="text" required/>
+					<input id="phone" class="input" type="phone" placeholder="555-555-5555" required/>
 					<small class="note">Note about this field</small>
 				</p>
 				<!-- Steward url -->
@@ -95,27 +94,22 @@
 		</form>
 	</section>
 
-	<section>
-		<div id="map" style="height:400px;"></div>
-	</section>
 	<section class="layout-semibreve">
-		<div class="layout-minim">
-			<h3 class="h3">Upload your trail segment data</h3>
-	        <form action="" method=post enctype=multipart/form-data>
-				<p>
-					<label for="combined">Contextual Information goes here</label>
-					<input type=file name=file>
-					<input type=submit value=Upload>
-				</p>
-	        </form>
-	    </div>
-	    <div class="layout-minim">
-	    </div>
+		<h3 class="h3">Upload your trail segment data</h3>
+		<p>Tell us about your organization. This information helps data consumers understand where this data came from, and who to get in touch with if needed. This same information is used by visitors who may need assistance while visiting your lands or trails.</p>
+        <form action="" method=post enctype=multipart/form-data>
+			<p>
+				<label for="combined">Contextual Information goes here</label>
+				<input type=file name=file>
+				<input type=submit value=Upload>
+			</p>
+        </form>
 	</section>
 
 	<section class="layout-semibreve">
 
 		<h3 class="h3">Upload your trailhead data</h3>
+		<p>Tell us about your organization. This information helps data consumers understand where this data came from, and who to get in touch with if needed. This same information is used by visitors who may need assistance while visiting your lands or trails.</p>
 	        <form action="" method=post enctype=multipart/form-data>
 				<p>
 					<label for="combined">Contextual Information goes here</label>
@@ -130,6 +124,7 @@
 	<section class="layout-semibreve">
 
 		<h3 class="h3">Upload your area data (boundaries)</h3>
+		<p>Tell us about your organization. This information helps data consumers understand where this data came from, and who to get in touch with if needed. This same information is used by visitors who may need assistance while visiting your lands or trails.</p>
 	        <form action="" method=post enctype=multipart/form-data>
 				<p>
 					<label for="combined">Contextual Information goes here</label>
