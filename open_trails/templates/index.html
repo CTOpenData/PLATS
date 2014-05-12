@@ -1,11 +1,145 @@
-<!doctype html>
-<html>
-<title>Upload new File</title>
-<body>
-<h1>Upload new File</h1>
-<form action="" method=post enctype=multipart/form-data>
-  <p><input type=file name=file>
-     <input type=submit value=Upload>
-</form>
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Code for America</title>
+
+ 	<!-- LEAFLET -->
+	<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.css"/>
+	<script src="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.js"></script>
+    <!-- CODE FOR AMERICA STYLES -->
+    <link rel="stylesheet" type="text/css" href="//cloud.typography.com/6435252/678502/css/fonts.css" />
+    <link rel="stylesheet" href="http://style.codeforamerica.org/0/style/css/main.css">
+    <link rel="stylesheet" href="http://style.codeforamerica.org/0/style/css/layout.css" media="all and (min-width: 40em)">
+    <link href="http://style.codeforamerica.org/0/style/css/prism.css" rel="stylesheet" />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <link rel="apple-touch-icon-precomposed" href="http://style.codeforamerica.org/0/style/favicons/60x60/flag-red.png"/>
+
+    <!--[if lt IE 9]>
+        <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!--[if (lt IE 9)&(gt IE 6)&(!IEMobile)]>
+        <link rel="stylesheet" href="http://style.codeforamerica.org/0/style/css/layout.css" media="all">
+    <![endif]-->
+
+	<style type="text/css">
+		.masthead:before {
+			background-image: url('media/images/masthead/masthead-1.jpg');
+		}
+    .feature-action{
+      display:none;
+    }
+    @media (min-width: 40em) {
+      .feature-action{
+        margin-top:27px;
+        display: block;
+      }
+      .feature-action a{
+        float:right;
+      }
+    }
+
+	</style>
+</head>
+
+<!-- Remove this inline style -->
+<body style="background:white">
+
+	<section class="layout-semibreve layout-centered">
+
+	        <h3 class="h3">Parks and trails are a cornerstone of public health and quality of life. The Public Land and Trail Specification helps citizens get outdoors to enjoy them.</h3>
+
+	</section>
+
+	<section class="layout-semibreve slab-gray">
+		<form id="steward" action="" method=post>
+
+			<h3 class="h3">Create your Organization Profile</h3>
+			<div class="layout-minim">
+				<!-- Steward name -->
+				<p>
+					<label for="text">Organization Name<abbr title="Required">*</abbr></label>
+					<input style="min-width:300px" id="name" class="input" type="text" required/>
+					<small class="note">Note about this field</small>
+				</p>
+				<!-- Steward email -->
+				<p>
+					<label for="email">Contact E-mail<abbr title="Required">*</abbr></label>
+					<input id="email" class="input" type="email" placeholder="you@example.com" required/>
+					<small class="note">Note about this field</small>
+				</p>
+			</div>
+			<div class="layout-minim">
+				<!-- Steward phone -->
+				<p>
+					<label for="phone">Contact Phone <abbr title="Required">*</abbr></label>
+					<input id="phone" class="input" type="text" required/>
+					<small class="note">Note about this field</small>
+				</p>
+				<!-- Steward url -->
+				<p>
+					<label for="url">Web Address <abbr title="Required">*</abbr></label>
+					<input id="url" class="input" type="url" placeholder="http://example.com" required/>
+					<small class="note">Note about this field</small>
+				</p>
+			</div>
+
+			<div class="layout-minim">
+			</div>
+			<p style="display:inline-block; width:100%">
+				<input type=submit value=Upload>
+			</p>
+		</form>
+	</section>
+
+	<section>
+		<div id="map" style="height:400px;"></div>
+	</section>
+	<section class="layout-semibreve">
+		<div class="layout-minim">
+			<h3 class="h3">Upload your trail segment data</h3>
+	        <form action="" method=post enctype=multipart/form-data>
+				<p>
+					<label for="combined">Contextual Information goes here</label>
+					<input type=file name=file>
+					<input type=submit value=Upload>
+				</p>
+	        </form>
+	    </div>
+	    <div class="layout-minim">
+	    </div>
+	</section>
+
+	<section class="layout-semibreve">
+
+		<h3 class="h3">Upload your trailhead data</h3>
+	        <form action="" method=post enctype=multipart/form-data>
+				<p>
+					<label for="combined">Contextual Information goes here</label>
+					<span class="combined">
+						<input type=file name=file>
+						<input type=submit value=Upload>
+					</span>
+				</p>
+	        </form>
+	</section>
+
+	<section class="layout-semibreve">
+
+		<h3 class="h3">Upload your area data (boundaries)</h3>
+	        <form action="" method=post enctype=multipart/form-data>
+				<p>
+					<label for="combined">Contextual Information goes here</label>
+					<span class="combined">
+						<input type=file name=file>
+						<input type=submit value=Upload>
+					</span>
+				</p>
+	        </form>
+	</section>
+
 </body>
 </html>
