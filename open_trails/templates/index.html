@@ -24,28 +24,12 @@
         <link rel="stylesheet" href="http://style.codeforamerica.org/0/style/css/layout.css" media="all">
     <![endif]-->
 
-	<style type="text/css">
-		.masthead:before {
-			background-image: url('media/images/masthead/masthead-1.jpg');
-		}
-    .feature-action{
-      display:none;
-    }
-    @media (min-width: 40em) {
-      .feature-action{
-        margin-top:27px;
-        display: block;
-      }
-      .feature-action a{
-        float:right;
-      }
-    }
-
-	</style>
+	<!-- CUSTOM STYLES -->
+	<link rel="stylesheet" href="../static/css/app.css" />
 </head>
 
 <!-- Remove this inline style -->
-<body style="background:white">
+<body>
 
 	<section class="layout-semibreve layout-centered">
 
@@ -53,7 +37,7 @@
 
 	</section>
 
-	<section class="layout-semibreve slab-gray">
+	<section class="layout-semibreve slab-gray steward-form">
 		<form id="steward" action="" method=post>
 			<h3 class="h3">Create your Organization Profile</h3>
 			<p>Tell us about your organization. This information helps data consumers understand where this data came from, and who to get in touch with if needed. This same information is used by visitors who may need assistance while visiting your lands or trails.</p>
@@ -61,14 +45,12 @@
 				<!-- Steward name -->
 				<p>
 					<label for="name">Organization Name<abbr title="Required">*</abbr></label>
-					<input style="min-width:300px" id="name" class="input" type="name" required/>
-					<small class="note">Note about this field</small>
+					<input id="name" class="input" type="name" required/>
 				</p>
 				<!-- Steward email -->
 				<p>
 					<label for="email">Contact E-mail<abbr title="Required">*</abbr></label>
 					<input id="email" class="input" type="email" placeholder="you@example.gov" required/>
-					<small class="note">Note about this field</small>
 				</p>
 			</div>
 			<div class="layout-minim">
@@ -76,19 +58,17 @@
 				<p>
 					<label for="phone">Contact Phone <abbr title="Required">*</abbr></label>
 					<input id="phone" class="input" type="phone" placeholder="555-555-5555" required/>
-					<small class="note">Note about this field</small>
 				</p>
 				<!-- Steward url -->
 				<p>
 					<label for="url">Web Address <abbr title="Required">*</abbr></label>
 					<input id="url" class="input" type="url" placeholder="http://example.com" required/>
-					<small class="note">Note about this field</small>
 				</p>
 			</div>
 
 			<div class="layout-minim">
 			</div>
-			<p style="display:inline-block; width:100%">
+			<p class="submit-button-row">
 				<input type=submit value=Upload>
 			</p>
 		</form>
