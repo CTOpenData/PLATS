@@ -37,7 +37,7 @@
 
 	</section>
 
-	<section class="layout-semibreve slab-gray steward-form">
+	<section class="layout-semibreve slab-gray" id="steward-form">
 		<form id="steward" action="" method=post>
 			<h3 class="h3">Create your Organization Profile</h3>
 			<p>Tell us about your organization. This information helps data consumers understand where this data came from, and who to get in touch with if needed. This same information is used by visitors who may need assistance while visiting your lands or trails.</p>
@@ -69,7 +69,7 @@
 			<div class="layout-minim">
 			</div>
 			<p class="submit-button-row">
-				<input type=submit value=Upload>
+				<input type=submit value=Upload id="steward-form-submit-btn">
 			</p>
 		</form>
 	</section>
@@ -116,4 +116,24 @@
 	        </form>
 	</section>
 </body>
+<!--  Scripts to be moved into seperate files later -->
+
+
+el.style.display = 'none';
+<script>
+
+window.addEventListener("DOMContentLoaded", function () {
+	console.log("onload event fired")
+
+	var stewardFormSubmitBtn = document.getElementById("steward-form-submit-btn")
+
+	//  Event Listeners
+	stewardFormSubmitBtn.addEventListener("click", function(stewardForm) {
+		console.log("submit-btn clicked")
+		stewardForm = document.getElementById("steward-form");
+		stewardForm.style.display = 'none';
+	});
+});
+
+</script>
 </html>

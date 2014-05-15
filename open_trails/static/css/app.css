@@ -24,11 +24,11 @@ body {
   background: white;
 }
 
-.steward-form input {
+#steward-form input {
   width: 80%;
 }
 
-.steward-form .submit-button-row {
+#steward-form .submit-button-row {
   display: inline-block;
   width: 100%;
 }
